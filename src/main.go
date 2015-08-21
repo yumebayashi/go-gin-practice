@@ -2,37 +2,12 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-//	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
-//	"fmt"
 	"log"
 	"net/http"
 )
 
 func main() {
-
-//	db, err := sql.Open("mysql", "root:rootpasswd@/go-test")
-//	if err != nil {
-//		log.Fatal("open erro: %v", err)
-//	}
-//	defer db.Close()
-//
-//	rows, qerr := db.Query("SELECT * FROM `live`")
-//
-//	defer rows.Close()
-//	if qerr != nil {
-//		log.Fatal("query error: %v", qerr)
-//	}
-//
-//	for rows.Next() {
-//		var c1 int
-//		var c2 string
-//		var c3 string
-//		if berr := rows.Scan(&c1, &c2, &c3); berr != nil {
-//			log.Fatal("scan erro: %v", berr)
-//		}
-//		fmt.Println(c1, c2, c3)
-//	}
 
 	db, err := openConnection()
 

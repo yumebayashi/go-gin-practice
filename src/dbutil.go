@@ -4,15 +4,20 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
+	"os"
 )
 
 
 func openConnection() (*sql.DB, error) {
-	return sql.Open("mysql", "root:rootpasswd@(localhost:3306)/adlive")
+	user := os.Getenv("MYSQL_USER")
+	pass := os.Getenv("MYSQL_PASS")
+	url := os.Getenv("MYSQL_URL")
+
+	return sql.Open("mysql", user + ":" + pass + "@(" + url + ":3306)/adlive")
 }
 
 
-func getLiveUrl(db *sql.DB, key string) string{
+func getLiveUrl(db *sql.DB, key string) string {
 
 	var url string
 
