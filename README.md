@@ -14,8 +14,11 @@ export PATH=$PATH:$GOROOT/bin
 
 git clone https://github.com/yumebayashi/go-gin-practice.git
 cd go-gin-practice
+＃mercurialが必要かも
 go get github.com/nitrous-io/goop
 goop install
+
+#必要かも
 export PATH=$PATH:$GOPATH/bin
 /srcで
 go run *.go
