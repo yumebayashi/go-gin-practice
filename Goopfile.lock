@@ -1,0 +1,3 @@
+github.com/gin-gonic/gin #0808f8a824cfb9aef6ea4fd664af238544b66fc1
+github.com/go-sql-driver/mysql #3dd7008ac1529aca1bcd8a9db75228a71ba23cac
+github.com/julienschmidt/httprouter #6aacfd5ab513e34f7e64ea9627ab9670371b34e7
